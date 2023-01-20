@@ -1,3 +1,4 @@
+import 'package:college_events/widgets/common/item_card.dart';
 import 'package:college_events/widgets/home/home_carousel/home_carousel.dart';
 import 'package:college_events/widgets/home/home_drawer/home_drawer.dart';
 import 'package:flutter/material.dart';
@@ -23,9 +24,21 @@ class _HomePageState extends State<HomePage> {
             SizedBox(
               child: HomeCarousel(),
             ),
-            Text(
-              'العرض ثم آخر الأخبار',
+            ItemCard(
+              id: "1",
+              title: "as",
+              image: 'images/tree.jpg',
             ),
+            ItemCard(
+              id: "1",
+              title: "as",
+              image: 'images/tree.jpg',
+            ),
+            ItemCard(
+              id: "1",
+              title: "as",
+              image: 'images/tree.jpg',
+            )
           ],
         ),
       ),

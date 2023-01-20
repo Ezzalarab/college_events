@@ -21,7 +21,7 @@ class ItemCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(20),
         ),
         elevation: 7,
-        margin: const EdgeInsets.all(10),
+        margin: const EdgeInsets.symmetric(horizontal: 25, vertical: 12),
         child: Column(
           children: [
             Stack(
@@ -33,7 +33,7 @@ class ItemCard extends StatelessWidget {
                   ),
                   child: Image.asset(
                     image,
-                    height: 250,
+                    height: 200,
                     width: double.infinity,
                     fit: BoxFit.cover,
                   ),
@@ -54,7 +54,7 @@ class ItemCard extends StatelessWidget {
                       stops: const [0.5, 1],
                     ),
                   ),
-                  height: 250,
+                  height: 230,
                   alignment: Alignment.bottomRight,
                   child: Text(
                     title,
@@ -65,44 +65,28 @@ class ItemCard extends StatelessWidget {
               ],
             ),
             Padding(
-              padding: const EdgeInsets.all(20),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+              padding: const EdgeInsets.all(15),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Row(
-                    children: [
-                      Icon(
-                        Icons.today,
-                        color: Theme.of(context).colorScheme.secondary,
-                      ),
-                      const SizedBox(
-                        width: 8,
-                      ),
-                      Text('duration يوم'),
-                    ],
+                  const Align(
+                      alignment: Alignment.topRight,
+                      child: Text(
+                        "كلية العلوم والحاسوب",
+                        style: TextStyle(fontSize: 18),
+                      )),
+                  const SizedBox(
+                    height: 5,
                   ),
                   Row(
-                    children: [
-                      Icon(
-                        Icons.wb_sunny,
-                        color: Theme.of(context).colorScheme.secondary,
+                    children: const [
+                      Icon(Icons.date_range),
+                      SizedBox(
+                        width: 10,
                       ),
-                      const SizedBox(
-                        width: 8,
-                      ),
-                      const Text("seasonText"),
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Icon(
-                        Icons.family_restroom,
-                        color: Theme.of(context).colorScheme.secondary,
-                      ),
-                      const SizedBox(
-                        width: 8,
-                      ),
-                      const Text("tripTyptText"),
+                      Align(
+                          alignment: Alignment.topRight,
+                          child: Text("2023/1/15")),
                     ],
                   ),
                 ],
