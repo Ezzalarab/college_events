@@ -1,3 +1,4 @@
+import 'package:college_events/widgets/faculty/person_card.dart';
 import 'package:college_events/widgets/home/home_carousel/home_carousel.dart';
 import 'package:college_events/widgets/home/home_drawer/home_drawer.dart';
 import 'package:flutter/material.dart';
@@ -22,9 +23,6 @@ class _HomePageState extends State<HomePage> {
           children: const [
             SizedBox(
               child: HomeCarousel(),
-            ),
-            Text(
-              'العرض ثم آخر الأخبار',
             ),
           ],
         ),

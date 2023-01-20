@@ -18,7 +18,7 @@ class HomeDrawerHeader extends StatelessWidget {
           child: Column(
             children: const [
               CircleAvatar(
-                backgroundImage: const AssetImage("images/na_univercity.jpg"),
+                backgroundImage: AssetImage("images/na_univercity.jpg"),
                 radius: 55,
               ),
               // Container(
