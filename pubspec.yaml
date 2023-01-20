@@ -13,6 +13,9 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  localization: ^2.1.0
 
 dev_dependencies:
 
@@ -27,9 +30,9 @@ flutter:
   assets:
     - images/
 
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
+  fonts:
+    - family: Almarai
+      fonts:
+        - asset: assets/font/Almarai-Regular.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
