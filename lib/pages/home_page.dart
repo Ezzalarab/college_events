@@ -1,3 +1,4 @@
+import 'package:college_events/widgets/faculty/person_card.dart';
 import 'package:college_events/widgets/home/home_drawer/home_drawer.dart';
 import 'package:flutter/material.dart';
 
@@ -25,9 +26,7 @@ class _HomePageState extends State<HomePage> {
         title: const Text("الرئيسية"),
       ),
       body: const Center(
-        child: Text(
-          'العرض ثم آخر الأخبار',
-        ),
+        child: PersonCard(),
       ),
       drawer: const HomeDrower(),
     );
