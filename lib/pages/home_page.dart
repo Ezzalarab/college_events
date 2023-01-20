@@ -1,3 +1,4 @@
+import 'package:college_events/widgets/home/home_drawer/home_drawer.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -28,6 +29,7 @@ class _HomePageState extends State<HomePage> {
           'العرض ثم آخر الأخبار',
         ),
       ),
+      drawer: const HomeDrower(),
     );
   }
 }
