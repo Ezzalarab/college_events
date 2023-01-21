@@ -1,16 +1,11 @@
+import 'package:college_events/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
 class ItemCard extends StatelessWidget {
-  final String id;
-  final String title;
-  final String image;
+  CardData cardData;
 
   // ignore: use_key_in_widget_constructors
-  const ItemCard({
-    required this.id,
-    required this.title,
-    required this.image,
-  });
+  ItemCard({Key? key, required this.cardData}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -32,36 +27,58 @@ class ItemCard extends StatelessWidget {
                     topRight: Radius.circular(20),
                   ),
                   child: Image.asset(
-                    image,
+                    cardData.image,
                     height: 200,
                     width: double.infinity,
                     fit: BoxFit.cover,
                   ),
                 ),
-                Container(
-                  padding: const EdgeInsets.symmetric(
-                    vertical: 10,
-                    horizontal: 20,
-                  ),
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter,
-                      colors: [
-                        Colors.black.withOpacity(0),
-                        Colors.black.withOpacity(.8),
-                      ],
-                      stops: const [0.5, 1],
+                Positioned(
+                  // top: 0,
+
+                  bottom: 5,
+                  width: MediaQuery.of(context).size.width,
+                  child: Container(
+                    // width: double.infinity,
+                    padding: const EdgeInsets.symmetric(
+                      vertical: 10,
+                      horizontal: 20,
                     ),
-                  ),
-                  height: 230,
-                  alignment: Alignment.bottomRight,
-                  child: Text(
-                    title,
-                    style: Theme.of(context).textTheme.headline6,
-                    overflow: TextOverflow.fade,
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [
+                          Colors.black.withOpacity(0),
+                          Colors.black.withOpacity(.8),
+                        ],
+                        stops: const [0.5, 1],
+                      ),
+                    ),
+                    height: 230,
+                    alignment: Alignment.bottomRight,
                   ),
                 ),
+                SizedBox(
+                  height: 200,
+                  child: Center(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          cardData.dateTody,
+                          style: TextStyle(color: Colors.amber, fontSize: 50),
+                          overflow: TextOverflow.fade,
+                        ),
+                        Text(
+                          cardData.dateMonth,
+                          style: TextStyle(color: Colors.amber, fontSize: 30),
+                          overflow: TextOverflow.fade,
+                        ),
+                      ],
+                    ),
+                  ),
+                )
               ],
             ),
             Padding(
@@ -69,10 +86,10 @@ class ItemCard extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  const Align(
+                  Align(
                       alignment: Alignment.topRight,
                       child: Text(
-                        "كلية العلوم والحاسوب",
+                        cardData.title,
                         style: TextStyle(fontSize: 18),
                       )),
                   const SizedBox(
