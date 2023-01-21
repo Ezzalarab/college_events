@@ -1,4 +1,5 @@
 import 'package:college_events/pages/about_college.dart';
+import 'package:college_events/pages/events_page.dart';
 import 'package:flutter/material.dart';
 
 import 'home_drawer_menu_item.dart';
@@ -19,14 +20,19 @@ class HomeDrawerBody extends StatelessWidget {
             title: "الرئسية",
             icon: Icons.home,
             onTap: () {
-              // Navigator.of(context).pushNamed(SignInPage.routeName);
+              Navigator.of(context).pop();
             },
           ),
           HomeDrawerMenuItem(
             title: "الفعاليات",
             icon: Icons.event,
             onTap: () {
-              // Navigator.of(context).pushNamed(SignUpPage.routeName);
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (_) => const EventsPage(),
+                ),
+              );
             },
           ),
           HomeDrawerMenuItem(
