@@ -1,11 +1,9 @@
-import 'package:college_events/pages/home_page.dart';
+import 'package:college_events/widgets/common/news_card.dart';
 import 'package:flutter/material.dart';
 
-class ItemCard extends StatelessWidget {
-  CardData cardData;
-
-  // ignore: use_key_in_widget_constructors
-  ItemCard({Key? key, required this.cardData}) : super(key: key);
+class EventCard extends StatelessWidget {
+  final EventData eventData;
+  const EventCard({Key? key, required this.eventData}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -27,15 +25,13 @@ class ItemCard extends StatelessWidget {
                     topRight: Radius.circular(20),
                   ),
                   child: Image.asset(
-                    cardData.image,
+                    eventData.image,
                     height: 200,
                     width: double.infinity,
                     fit: BoxFit.cover,
                   ),
                 ),
                 Positioned(
-                  // top: 0,
-
                   bottom: 5,
                   width: MediaQuery.of(context).size.width,
                   child: Container(
@@ -52,7 +48,7 @@ class ItemCard extends StatelessWidget {
                           Colors.black.withOpacity(0),
                           Colors.black.withOpacity(.8),
                         ],
-                        stops: const [0.5, 1],
+                        stops: const [0.2, 1],
                       ),
                     ),
                     height: 230,
@@ -66,13 +62,19 @@ class ItemCard extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          cardData.dateTody,
-                          style: TextStyle(color: Colors.amber, fontSize: 50),
+                          eventData.dateTody,
+                          style: TextStyle(
+                            color: Theme.of(context).colorScheme.secondary,
+                            fontSize: 60,
+                          ),
                           overflow: TextOverflow.fade,
                         ),
                         Text(
-                          cardData.dateMonth,
-                          style: TextStyle(color: Colors.amber, fontSize: 30),
+                          eventData.dateMonth,
+                          style: TextStyle(
+                            color: Theme.of(context).colorScheme.secondary,
+                            fontSize: 30,
+                          ),
                           overflow: TextOverflow.fade,
                         ),
                       ],
@@ -89,21 +91,20 @@ class ItemCard extends StatelessWidget {
                   Align(
                       alignment: Alignment.topRight,
                       child: Text(
-                        cardData.title,
-                        style: TextStyle(fontSize: 18),
+                        eventData.title,
+                        style: const TextStyle(fontSize: 18),
                       )),
-                  const SizedBox(
-                    height: 5,
-                  ),
+                  const SizedBox(height: 5),
                   Row(
-                    children: const [
-                      Icon(Icons.date_range),
-                      SizedBox(
-                        width: 10,
-                      ),
+                    children: [
+                      const Icon(Icons.access_time_outlined),
+                      const SizedBox(width: 10),
+                      const Text("الوقت:"),
+                      const SizedBox(width: 10),
                       Align(
-                          alignment: Alignment.topRight,
-                          child: Text("2023/1/15")),
+                        alignment: Alignment.topRight,
+                        child: Text(eventData.dateHoure),
+                      ),
                     ],
                   ),
                 ],
@@ -114,4 +115,23 @@ class ItemCard extends StatelessWidget {
       ),
     );
   }
+}
+
+class EventData {
+  final String id;
+  final String title;
+  final String image;
+  final String dateTody;
+  final String dateMonth;
+  final String dateHoure;
+  final String place;
+  EventData({
+    required this.id,
+    required this.title,
+    required this.image,
+    required this.dateTody,
+    required this.dateMonth,
+    required this.dateHoure,
+    required this.place,
+  });
 }
