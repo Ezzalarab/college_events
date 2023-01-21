@@ -8,11 +8,20 @@ class AboutCollege extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("حول الكلية"),
+        centerTitle: true,
       ),
-      body: const Center(
-        child: Text(
-          'الأقسام والأماكن',
-        ),
+      body: ListView(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(15.0),
+            child: const Text(
+              'لمحة تاريخية',
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 24),
+            ),
+          ),
+          // Text.rich()
+        ],
       ),
     );
   }
