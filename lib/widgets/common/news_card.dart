@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class NewsCard extends StatelessWidget {
-  final NewsData newsData;
+  final News newsData;
   const NewsCard({Key? key, required this.newsData}) : super(key: key);
 
   @override
@@ -62,12 +62,12 @@ class NewsCard extends StatelessWidget {
   }
 }
 
-class NewsData {
+class News {
   final String id;
   final String title;
   final String image;
   final String date;
-  NewsData({
+  News({
     required this.id,
     required this.title,
     required this.image,

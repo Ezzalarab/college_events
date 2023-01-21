@@ -15,20 +15,20 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  List<NewsData> news = [
-    NewsData(
+  List<News> news = [
+    News(
       id: "n1",
       title: "آداب شرورة تدشن المعرض التوعوي بأضرار المخدرات",
       image: 'images/tree.jpg',
       date: "2023/1/15",
     ),
-    NewsData(
+    News(
       id: "n2",
       title: "آداب شرورة تدشن المعرض التوعوي بأضرار المخدرات",
       image: 'images/tree.jpg',
       date: "2023/1/15",
     ),
-    NewsData(
+    News(
       id: "n3",
       title: "آداب شرورة تدشن المعرض التوعوي بأضرار المخدرات",
       image: 'images/tree.jpg',
@@ -67,28 +67,6 @@ class _HomePageState extends State<HomePage> {
               itemCount: news.length,
               itemBuilder: (context, index) => NewsCard(
                 newsData: news[index],
-              ),
-            ),
-            EventCard(
-              eventData: EventData(
-                id: "1",
-                title: "آداب شرورة تدشن المعرض التوعوي بأضرار المخدرات",
-                dateMonth: " ربيع الاخر",
-                dateTody: "10",
-                dateHoure: "1:30–3:30 pm",
-                image: 'images/tree.jpg',
-                place: "قاعة الملك",
-              ),
-            ),
-            EventCard(
-              eventData: EventData(
-                id: "1",
-                title: "آداب شرورة تدشن المعرض التوعوي بأضرار المخدرات",
-                dateMonth: " ربيع الاخر",
-                dateTody: "10",
-                dateHoure: "1:30–3:30 pm",
-                image: 'images/tree.jpg',
-                place: "قاعة الملك",
               ),
             ),
           ],

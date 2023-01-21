@@ -2,7 +2,7 @@ import 'package:college_events/widgets/common/news_card.dart';
 import 'package:flutter/material.dart';
 
 class EventCard extends StatelessWidget {
-  final EventData eventData;
+  final Event eventData;
   const EventCard({Key? key, required this.eventData}) : super(key: key);
 
   @override
@@ -117,7 +117,7 @@ class EventCard extends StatelessWidget {
   }
 }
 
-class EventData {
+class Event {
   final String id;
   final String title;
   final String image;
@@ -125,7 +125,7 @@ class EventData {
   final String dateMonth;
   final String dateHoure;
   final String place;
-  EventData({
+  Event({
     required this.id,
     required this.title,
     required this.image,
