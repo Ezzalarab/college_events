@@ -16,11 +16,11 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.indigo,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-        fontFamily: "Almarai",
-        primaryColor: Colors.indigo[700],
-      ),
+          primarySwatch: Colors.indigo,
+          visualDensity: VisualDensity.adaptivePlatformDensity,
+          fontFamily: "Almarai",
+          primaryColor: Colors.indigo[700],
+          colorScheme: const ColorScheme.light(secondary: Colors.amber)),
       locale: const Locale("ar", "AE"),
       localizationsDelegates: const [
         GlobalMaterialLocalizations.delegate,
