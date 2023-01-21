@@ -53,7 +53,7 @@ class HomeDrawerBody extends StatelessWidget {
             title: "حول الكلية",
             icon: Icons.info_outline,
             onTap: () {
-              Navigator.of(context).pushReplacement(
+              Navigator.of(context).push(
                 MaterialPageRoute<void>(
                   builder: (_) => const AboutCollege(),
                 ),
