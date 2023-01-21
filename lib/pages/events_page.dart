@@ -1,4 +1,4 @@
-import 'package:college_events/widgets/common/event_card.dart';
+import 'package:college_events/widgets/events/event_card.dart';
 import 'package:flutter/material.dart';
 
 class EventsPage extends StatefulWidget {
@@ -56,29 +56,30 @@ class _EventsPageState extends State<EventsPage> {
         centerTitle: true,
       ),
       body: SingleChildScrollView(
-        child: ListView.builder(
-          shrinkWrap: true,
-          physics: const NeverScrollableScrollPhysics(),
-          itemCount: events.length,
-          itemBuilder: (context, index) => EventCard(
-            eventData: events[index],
-          ),
+        child: Column(
+          children: [
+            const Padding(
+              padding: EdgeInsets.all(30),
+              child: Text(
+                "فعاليات الكلية",
+                style: TextStyle(
+                  color: Colors.black87,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            ListView.builder(
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              itemCount: events.length,
+              itemBuilder: (context, index) => EventCard(
+                eventData: events[index],
+              ),
+            ),
+          ],
         ),
       ),
     );
   }
 }
-
-        // const Padding(
-        //   padding: EdgeInsets.symmetric(
-        //     horizontal: 30,
-        //     vertical: 10,
-        //   ),
-        //   child: Text(
-        //     "الفعاليات",
-        //     style: TextStyle(
-        //       fontSize: 20,
-        //       fontWeight: FontWeight.bold,
-        //     ),
-        //   ),
-        // ),

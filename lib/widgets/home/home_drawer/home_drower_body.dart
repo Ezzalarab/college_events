@@ -1,4 +1,5 @@
 import 'package:college_events/pages/about_college.dart';
+import 'package:college_events/pages/college_faculty.dart';
 import 'package:college_events/pages/events_page.dart';
 import 'package:flutter/material.dart';
 
@@ -39,7 +40,12 @@ class HomeDrawerBody extends StatelessWidget {
             icon: Icons.group,
             title: "طاقم التدريس",
             onTap: () async {
-              // Navigator.of(context).pushNamed(SettingPage.routeName);
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (_) => const CollegeFaculty(),
+                ),
+              );
             },
           ),
           const Divider(color: Colors.black54),
@@ -49,7 +55,7 @@ class HomeDrawerBody extends StatelessWidget {
             onTap: () {
               Navigator.of(context).pushReplacement(
                 MaterialPageRoute<void>(
-                  builder: (BuildContext context) => const AboutCollege(),
+                  builder: (_) => const AboutCollege(),
                 ),
               );
             },

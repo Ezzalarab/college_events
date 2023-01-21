@@ -2,15 +2,8 @@
 import 'package:flutter/material.dart';
 
 class PersonCard extends StatelessWidget {
-  const PersonCard({
-    Key? key,
-    required this.img,
-    required this.name,
-    required this.disc,
-  }) : super(key: key);
-  final String img;
-  final String name;
-  final String disc;
+  const PersonCard({Key? key, required this.person}) : super(key: key);
+  final Doctor person;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +16,7 @@ class PersonCard extends StatelessWidget {
               padding: const EdgeInsets.all(10.0),
               child: CircleAvatar(
                 backgroundImage: AssetImage(
-                  img,
+                  person.img,
                 ),
                 radius: 60,
               ),
@@ -31,7 +24,7 @@ class PersonCard extends StatelessWidget {
             const SizedBox(width: 10),
             Center(
               child: Text(
-                name,
+                person.name,
                 style: const TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
@@ -43,7 +36,7 @@ class PersonCard extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
           child: Text(
-            disc,
+            person.disc,
             style: const TextStyle(
               color: Colors.black87,
               height: 1.5,
@@ -54,4 +47,15 @@ class PersonCard extends StatelessWidget {
       ],
     );
   }
+}
+
+class Doctor {
+  final String name;
+  final String img;
+  final String disc;
+  Doctor({
+    required this.name,
+    required this.img,
+    required this.disc,
+  });
 }
