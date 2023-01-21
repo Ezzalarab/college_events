@@ -28,6 +28,7 @@ class HomeDrawerBody extends StatelessWidget {
             title: "الفعاليات",
             icon: Icons.event,
             onTap: () {
+              Navigator.of(context).pop();
               Navigator.push(
                 context,
                 MaterialPageRoute(
@@ -40,6 +41,7 @@ class HomeDrawerBody extends StatelessWidget {
             icon: Icons.group,
             title: "طاقم التدريس",
             onTap: () async {
+              Navigator.of(context).pop();
               Navigator.push(
                 context,
                 MaterialPageRoute(
@@ -48,11 +50,11 @@ class HomeDrawerBody extends StatelessWidget {
               );
             },
           ),
-          const Divider(color: Colors.black54),
           HomeDrawerMenuItem(
             title: "حول الكلية",
             icon: Icons.info_outline,
             onTap: () {
+              Navigator.of(context).pop();
               Navigator.of(context).push(
                 MaterialPageRoute<void>(
                   builder: (_) => const AboutCollege(),
