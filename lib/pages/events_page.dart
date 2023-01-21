@@ -9,8 +9,8 @@ class EventsPage extends StatefulWidget {
 }
 
 class _EventsPageState extends State<EventsPage> {
-  List<EventData> events = [
-    EventData(
+  List<Event> events = [
+    Event(
       id: "1",
       title: "آداب شرورة تدشن المعرض التوعوي بأضرار المخدرات",
       dateMonth: " ربيع الاخر",
@@ -19,7 +19,7 @@ class _EventsPageState extends State<EventsPage> {
       image: 'images/tree.jpg',
       place: "قاعة الملك",
     ),
-    EventData(
+    Event(
       id: "1",
       title: "آداب شرورة تدشن المعرض التوعوي بأضرار المخدرات",
       dateMonth: " ربيع الاخر",
@@ -28,7 +28,7 @@ class _EventsPageState extends State<EventsPage> {
       image: 'images/tree.jpg',
       place: "قاعة الملك",
     ),
-    EventData(
+    Event(
       id: "1",
       title: "آداب شرورة تدشن المعرض التوعوي بأضرار المخدرات",
       dateMonth: " ربيع الاخر",
@@ -37,7 +37,7 @@ class _EventsPageState extends State<EventsPage> {
       image: 'images/tree.jpg',
       place: "قاعة الملك",
     ),
-    EventData(
+    Event(
       id: "1",
       title: "آداب شرورة تدشن المعرض التوعوي بأضرار المخدرات",
       dateMonth: " ربيع الاخر",
@@ -81,7 +81,7 @@ class _EventsPageState extends State<EventsPage> {
               ),
             ),
             EventCard(
-              eventData: EventData(
+              eventData: Event(
                 id: "1",
                 title: "آداب شرورة تدشن المعرض التوعوي بأضرار المخدرات",
                 dateMonth: " ربيع الاخر",
@@ -92,7 +92,7 @@ class _EventsPageState extends State<EventsPage> {
               ),
             ),
             EventCard(
-              eventData: EventData(
+              eventData: Event(
                 id: "1",
                 title: "آداب شرورة تدشن المعرض التوعوي بأضرار المخدرات",
                 dateMonth: " ربيع الاخر",
