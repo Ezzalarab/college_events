@@ -1,4 +1,4 @@
-import 'package:college_events/widgets/common/news_card.dart';
+import 'package:college_events/widgets/home/news_card.dart';
 import 'package:flutter/material.dart';
 
 class EventCard extends StatelessWidget {

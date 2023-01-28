@@ -1,9 +1,9 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 
-import 'package:college_events/widgets/common/event_card.dart';
+import 'package:college_events/widgets/events/event_card.dart';
 import 'package:flutter/material.dart';
 
-import 'package:college_events/widgets/common/news_card.dart';
+import 'package:college_events/widgets/home/news_card.dart';
 import 'package:college_events/widgets/home/home_carousel/home_carousel.dart';
 import 'package:college_events/widgets/home/home_drawer/home_drawer.dart';
 
