@@ -34,7 +34,7 @@ class HomeDrawerHeader extends StatelessWidget {
               //     ),
               //   ),
               // ),
-              const SizedBox(height: 8),
+              const SizedBox(height: 4),
               const Text(
                 "كلية العلوم والحاسوب",
                 style: TextStyle(
