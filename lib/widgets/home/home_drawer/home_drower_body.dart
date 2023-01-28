@@ -39,7 +39,7 @@ class HomeDrawerBody extends StatelessWidget {
             icon: Icons.group,
             title: "طاقم التدريس",
             onTap: () async {
-              // Navigator.of(context).pushNamed(SettingPage.routeName);
+              // Navigator.of(context).pushNamed(Ev);
             },
           ),
           const Divider(color: Colors.black54),
