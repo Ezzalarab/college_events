@@ -1,5 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 
+import 'package:college_events/main.dart';
 import 'package:college_events/widgets/events/event_card.dart';
 import 'package:flutter/material.dart';
 
@@ -40,7 +41,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("الرئيسية"),
-        backgroundColor: Colors.amber[600],
+        backgroundColor: primColor,
         centerTitle: true,
       ),
       body: SingleChildScrollView(

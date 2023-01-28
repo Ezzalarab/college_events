@@ -16,29 +16,26 @@ class HomeDrawerHeader extends StatelessWidget {
         onTap: () {},
         child: Center(
           child: Column(
-            children: const [
-              CircleAvatar(
-                backgroundImage: AssetImage("images/na_univercity.jpg"),
-                radius: 55,
+            children: [
+              SizedBox(
+                height: 100,
+                width: 120,
+                child: Center(
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: Image.asset(
+                      "images/na_univercity.jpg",
+                      fit: BoxFit.contain,
+                      height: 80,
+                    ),
+                  ),
+                ),
               ),
-              // Container(
-              //   height: 100,
-              //   width: 100,
-              //   decoration: BoxDecoration(
-              //     borderRadius: BorderRadius.circular(50),
-              //   ),
-              //   child: Center(
-              //     child: Image.asset(
-              //       "images/na_univercity.jpg",
-              //       fit: BoxFit.fill,
-              //     ),
-              //   ),
-              // ),
               const SizedBox(height: 4),
               const Text(
-                "كلية العلوم والحاسوب",
+                "كلية علوم الحاسب ونظم المعلومات",
                 style: TextStyle(
-                  fontSize: 16,
+                  fontSize: 14,
                   color: Colors.white,
                 ),
               ),

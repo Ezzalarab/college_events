@@ -1,4 +1,3 @@
-import 'package:college_events/widgets/home/news_card.dart';
 import 'package:flutter/material.dart';
 
 class EventCard extends StatelessWidget {
@@ -104,6 +103,19 @@ class EventCard extends StatelessWidget {
                       Align(
                         alignment: Alignment.topRight,
                         child: Text(eventData.dateHoure),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 5),
+                  Row(
+                    children: [
+                      const Icon(Icons.place_outlined),
+                      const SizedBox(width: 10),
+                      const Text("المكان:"),
+                      const SizedBox(width: 10),
+                      Align(
+                        alignment: Alignment.topRight,
+                        child: Text(eventData.place),
                       ),
                     ],
                   ),

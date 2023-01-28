@@ -1,3 +1,4 @@
+import 'package:college_events/main.dart';
 import 'package:college_events/widgets/faculty/person_card.dart';
 import 'package:flutter/material.dart';
 
@@ -35,10 +36,12 @@ class _CollegeFacultyState extends State<CollegeFaculty> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("هئية التدريس"),
+        backgroundColor: primColor,
         centerTitle: true,
       ),
       body: SingleChildScrollView(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Padding(
               padding: EdgeInsets.all(30),
