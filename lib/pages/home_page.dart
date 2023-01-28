@@ -40,6 +40,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("الرئيسية"),
+        backgroundColor: Colors.amber[600],
         centerTitle: true,
       ),
       body: SingleChildScrollView(

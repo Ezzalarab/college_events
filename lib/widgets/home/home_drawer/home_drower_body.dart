@@ -41,7 +41,10 @@ class HomeDrawerBody extends StatelessWidget {
             icon: Icons.group,
             title: "طاقم التدريس",
             onTap: () async {
-              // Navigator.of(context).pushNamed(SettingPage.routeName);
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: ((context) => const CollegeFaculty())));
             },
           ),
           HomeDrawerMenuItem(
