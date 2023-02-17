@@ -6,6 +6,8 @@ void main() {
   runApp(const MyApp());
 }
 
+const primColor = Color(0xffc99e2d);
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 

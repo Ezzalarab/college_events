@@ -15,10 +15,10 @@ dependencies:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
+  icons_launcher: ^2.0.6
   localization: ^2.1.0
 
 dev_dependencies:
-
   flutter_lints: ^2.0.0
   flutter_test:
     sdk: flutter
@@ -26,7 +26,7 @@ dev_dependencies:
 flutter:
 
   uses-material-design: true
-  
+
   assets:
     - images/
 
@@ -36,3 +36,12 @@ flutter:
         - asset: assets/font/Almarai-Regular.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
+
+
+icons_launcher:
+  image_path: "images/na_univercity.jpg"
+  platforms:
+    android:
+      enable: true
+    ios:
+      enable: false

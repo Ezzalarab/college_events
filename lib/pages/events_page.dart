@@ -1,3 +1,4 @@
+import 'package:college_events/main.dart';
 import 'package:college_events/widgets/events/event_card.dart';
 import 'package:flutter/material.dart';
 
@@ -22,11 +23,11 @@ class _EventsPageState extends State<EventsPage> {
     Event(
       id: "1",
       title: "آداب شرورة تدشن المعرض التوعوي بأضرار المخدرات",
-      dateMonth: " ربيع الاخر",
-      dateTody: "10",
+      dateMonth: " ربيع الأول",
+      dateTody: "06",
       dateHoure: "1:30–3:30 pm",
-      image: 'images/tree.jpg',
-      place: "قاعة الملك",
+      image: 'images/place.jpg',
+      place: "القاعة الكبرى",
     ),
     Event(
       id: "1",
@@ -53,10 +54,12 @@ class _EventsPageState extends State<EventsPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("الفعاليات"),
+        backgroundColor: primColor,
         centerTitle: true,
       ),
       body: SingleChildScrollView(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Padding(
               padding: EdgeInsets.all(30),

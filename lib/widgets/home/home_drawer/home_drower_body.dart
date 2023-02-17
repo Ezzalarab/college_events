@@ -14,8 +14,7 @@ class HomeDrawerBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(10),
-      child: Wrap(
-        runSpacing: 10,
+      child: Column(
         children: [
           HomeDrawerMenuItem(
             title: "الرئسية",
@@ -24,6 +23,7 @@ class HomeDrawerBody extends StatelessWidget {
               Navigator.of(context).pop();
             },
           ),
+          const SizedBox(height: 10.0),
           HomeDrawerMenuItem(
             title: "الفعاليات",
             icon: Icons.event,
@@ -37,6 +37,7 @@ class HomeDrawerBody extends StatelessWidget {
               );
             },
           ),
+          const SizedBox(height: 10.0),
           HomeDrawerMenuItem(
             icon: Icons.group,
             title: "طاقم التدريس",
@@ -47,6 +48,7 @@ class HomeDrawerBody extends StatelessWidget {
                       builder: ((context) => const CollegeFaculty())));
             },
           ),
+          const SizedBox(height: 10.0),
           HomeDrawerMenuItem(
             title: "حول الكلية",
             icon: Icons.info_outline,
